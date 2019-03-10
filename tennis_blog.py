@@ -21,6 +21,10 @@ posts = [
 def home():
     return render_template('home_page.html', posts=posts)
 
+@app.route("/about")
+def about():
+    return render_template('about_page.html')
+
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1', debug=True)
